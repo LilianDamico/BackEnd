@@ -66,3 +66,6 @@ C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.0\BackEnd.pdb
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.0\BackEnd.genruntimeconfig.cache
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.0\ref\BackEnd.dll
+C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.0\BackEnd.sourcelink.json
