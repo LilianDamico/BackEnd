@@ -4,7 +4,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace BackEnd.Services
+namespace BackEnd.Services.Token
 {
     public class TokenService : ITokenService
     {
@@ -21,7 +21,7 @@ namespace BackEnd.Services
             var credentials = new SigningCredentials(securityKey,
                 SecurityAlgorithms.HmacSha256);
 
-            var token = new JwtSecurityToken(issuer: issuer, 
+            var token = new JwtSecurityToken(issuer: issuer,
                 audience: audience,
                 claims: claims,
                 expires: DateTime.Now.AddMinutes(120),

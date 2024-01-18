@@ -4,7 +4,8 @@ using Microsoft.Data.SqlClient;
 using BackEnd.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using System.Text; // Adicione esta linha
+using System.Text;
+using BackEnd.Services.Token; // Adicione esta linha
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(SqlServerConnection,
         sqlServerOptions => sqlServerOptions.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)
     ));
+
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<IManagementService, ManagementService>();
 
 builder.Services.AddSingleton<ITokenService>(new TokenService());
 

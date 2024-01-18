@@ -1,6 +1,6 @@
 ﻿using BackEnd.Models;
 
-namespace BackEnd.Services
+namespace BackEnd.Services.Token
 {
     public interface ITokenService
     {

@@ -6,6 +6,7 @@ C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\BackEnd.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\BackEnd.pdb
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Humanizer.dll
+C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -15,6 +16,7 @@ C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
@@ -52,6 +54,7 @@ C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.0\BackEnd.csproj.CoreCompileInputs.cache
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.0\BackEnd.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.0\BackEnd.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.0\BackEnd.sourcelink.json
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.0\staticwebassets\msbuild.BackEnd.Microsoft.AspNetCore.StaticWebAssets.props
@@ -66,6 +69,3 @@ C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.0\BackEnd.pdb
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.0\BackEnd.genruntimeconfig.cache
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.0\ref\BackEnd.dll
-C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\obj\Debug\net6.0\BackEnd.sourcelink.json

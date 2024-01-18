@@ -1,83 +1,107 @@
-﻿using BackEnd.Context;
-using BackEnd.Models;
+﻿using BackEnd.Models;
+using BackEnd.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BackEnd.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class UsuarioController : ControllerBase
     {
-        private readonly AppDbContext _context;
-        private object usuario;
+        private IUsuarioService _usuarioService;
 
-        public UsuarioController(AppDbContext context)
+        public UsuarioController(IUsuarioService usuarioService)
         {
-            _context = context;
+            _usuarioService = usuarioService;
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Usuario>> Get()
+        public async Task<ActionResult<IAsyncEnumerable<Usuario>>> GetUsuarios()
         {
-            var usuarios = _context.Usuarios.ToList();
-            if(usuarios is null)
+            try
             {
-                return NotFound();
+                var usuarios = await _usuarioService.GetUsuarios();
+                return Ok(usuarios);
             }
-            return usuarios;
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
         }
 
-        [HttpGet("{id:int}", Name="ObterUsuario")]
-        public ActionResult<Usuario> Get(int id)
+        [HttpGet("{id:int}", Name ="GetUsuario")]
+        public async Task<ActionResult<Usuario>> GetUsuarios(int id)
         {
-            var usuarios = _context.Usuarios.FirstOrDefault(u => u.Id == id);
-            if(usuarios is null)
+            try
             {
-                return NotFound();
+                var usuario = await _usuarioService.GetUsuario(id);
+                if (usuario == null)
+                {
+                    return NotFound();
+                }
+                return Ok(usuario);
             }
-            return usuarios;
+            catch 
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
         }
 
         [HttpPost]
-
-        public ActionResult Post(Usuario usuario)
+        public async Task<ActionResult> Create(Usuario usuario)
         {
-            _context.Usuarios.Add(usuario);
-            _context.SaveChanges();
-
-            return new CreatedAtRouteResult("ObterUsuario",
-                new { id = usuario.Id }, usuario);
-        }
-
-        [HttpPut("{id:int}")]
-
-        public ActionResult Put(int id, Usuario usuario) 
-        {
-            if(id != usuario.Id)
+            try
             {
-                return NotFound();
+                await _usuarioService.CreateUsuario(usuario);
+                return CreatedAtRoute("GetUsuario", new { id = usuario.Id }, usuario);
             }
-
-            _context.Entry(usuario).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            _context.SaveChanges();
-
-            return Ok(usuario);        
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult> Edit(int id, [FromBody] Usuario usuario)
+        {
+            try
+            {
+                if(usuario.Id == id)
+                {
+                    await _usuarioService.UpdateUsuario(usuario);
+                    return Ok($"Aluno id={id} atualizado com sucesso.");
+                }
+                else
+                {
+                    return BadRequest();
+                }
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
         }
 
         [HttpDelete("{id:int}")]
-        public ActionResult Delete(int id) 
+        public async Task<ActionResult> Delete(int id)
         {
-            var usuario = _context.Usuarios.FirstOrDefault(u => u.Id == id);
-
-            if (usuario is null)
+            try
             {
-                return BadRequest("Usuario não localizado...");
+                var usuario = await _usuarioService.GetUsuario(id);
+                if(usuario != null)
+                {
+                    await _usuarioService.DeleteUsuario(usuario);
+                    return Ok($"Usuario id={id} excluído com sucesso.");
+                }
+                else
+                {
+                    return NotFound();
+                }
             }
-            _context.Usuarios.Remove(usuario);
-            _context.SaveChanges();
-
-            return Ok(usuario);
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
         }
     }
 }
