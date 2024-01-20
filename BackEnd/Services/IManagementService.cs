@@ -9,5 +9,7 @@ namespace BackEnd.Services
         Task CreateManagement(Management management);
         Task DeleteManagement(Management management);
         Task UpdateManagement(Management management);
+        Task Getmanagements();
+        Task DeleteManagement(object management);
     }
 }

@@ -7,6 +7,9 @@ C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\BackEnd.pdb
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Humanizer.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -15,6 +18,8 @@ C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\lfons\OneDrive\Área de Trabalho\Osprey\BackEnd\BackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll

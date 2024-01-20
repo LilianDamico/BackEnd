@@ -49,5 +49,15 @@ namespace BackEnd.Services
             _context.Managements.Remove(management);
             await _context.SaveChangesAsync();
         }
+
+        public Task Getmanagements()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteManagement(object management)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
