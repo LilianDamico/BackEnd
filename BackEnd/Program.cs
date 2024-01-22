@@ -1,23 +1,32 @@
 using BackEnd.Context;
-using Microsoft.EntityFrameworkCore;
 using BackEnd.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using BackEnd.Services.Token;
-using Microsoft.AspNetCore.Identity;
-using System.Reflection;
 using Microsoft.OpenApi.Models;
-
-
+using System.IO;
+using System.Text;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using BackEnd.Services.Token;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Adiciona serviços ao contêiner.
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin", builder =>
+    {
+        builder
+            .AllowAnyOrigin() // Você pode restringir a origem conforme necessário
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
 
-
-// Add services to the container.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -30,7 +39,7 @@ builder.Services.AddSwaggerGen(c =>
         Scheme = "Bearer",
         BearerFormat = "JWT",
         In = ParameterLocation.Header,
-        Description = "JWT Authorization header using the Bearer scheme." + 
+        Description = "JWT Authorization header using the Bearer scheme." +
         " \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below." +
         "\r\n\r\nExample: \"Bearer 12345abcdf\" ",
     });
@@ -50,10 +59,6 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-
-
-
-
 string SqlServerConnection = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(SqlServerConnection,
@@ -68,12 +73,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
         var builder = new ConfigurationBuilder()
-    .SetBasePath(Directory.GetCurrentDirectory())
-    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-    .AddEnvironmentVariables();
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+            .AddEnvironmentVariables();
 
         IConfigurationRoot Configuration = builder.Build();
-
 
         options.TokenValidationParameters = new TokenValidationParameters
         {
@@ -88,20 +92,18 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<IManagementService, ManagementService>();
-builder.Services.AddScoped<IAuthenticate,AuthenticateService>();
-
-
+builder.Services.AddScoped<IAuthenticate, AuthenticateService>();
 
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configura o pipeline de solicitação HTTP.
 if (app.Environment.IsDevelopment())
 {
+    app.UseCors("AllowSpecificOrigin");
     app.UseSwagger();
     app.UseSwaggerUI();
 }
